@@ -1,0 +1,193 @@
+.color-bar {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #3a3838;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.color-bar span {
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.color-bar span:first-child {
+  margin-left: 0;
+}
+
+.color-bar span:last-child {
+  margin-right: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #d5d5d5;
+  border-top: 1px solid rgba(121, 121, 121, 0.898);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+footer p {
+  padding: 0;
+  margin: 0;
+}
+
+#searchForm input[type="text"] {
+  padding: 5px;
+  font-size: 14px;
+}
+
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+section .form-group {
+  margin: 10px;
+}
+
+section .form-group label {
+  font-weight: bold;
+}
+
+section .form-group input[type="number"],
+section .form-group input[type="date"] {
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: rgba(70, 182, 89, 0.9);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+#resultTable {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#resultTable th,
+#resultTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#resultTable th {
+  background-color: #f2f2f2;
+}
+
+#chartSection {
+  text-align: center;
+}
+
+.chart-container {
+  width: 1000px;
+  height: 800px;
+}
+
+#barChart{
+  max-height: 1200px;
+}
+
+#pieChart{
+  max-height: 400px;
+  max-width: 600px;
+}
+
+#option-container {
+  position: relative;
+}
+
+#option {
+  position: absolute;
+  top: 100%;     /* Position the #option div just below the parent container */
+  left: 0;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(165, 165, 165, 0.8);
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+#messageSection {
+  text-align: center;
+  padding: 20px;
+}
+
+#messageBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(69, 69, 69, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#messageBox p {
+  font-size: 18px;
+  margin: 0;
+}
+
+button:hover {
+  background-color: #3b863e;
+}

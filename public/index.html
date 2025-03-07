@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Visualization</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="script.js"></script>
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+</head>
+<body>
+  <header>
+    <h1>Data Visualization</h1>
+  </header>
+
+  <main>
+    <section id="visualizationForm">
+      <form>
+
+
+
+        <div id="settingsButton-container">
+          <button type="submit">Calculate Score</button>
+          <button type="button" id="saveButton">Save Score</button>
+          <button type="button" id="settingsButton">Settings</button>
+          <button type="button" id="clearButton">Clear Score</button>
+          <div id="settings" class="hidden">
+            <h2>Visualization Settings</h2>
+
+            <div class="form-group">
+              <label >Start Date:</label>
+              <input type="date" id="startDate" value="2020-04-10">
+              <label >Date A:</label>
+              <input type="date" id="dateA" value="2022-01-01">
+              <label >Date B:</label>
+              <input type="date" id="dateB" value="2023-01-01">
+              <label >End Date:</label>
+              <input type="date" id="endDate" value="2023-06-16">
+            </div>
+
+            <div class="form-group">
+              <div class="color-bar" id="colorBar"></div>
+            </div>
+
+            <div id="option-container">
+              <button type="button" id="toggleButton">Options</button>
+              <div id="option" class="hidden">
+                <label >T_other:</label>
+                <input type="number" id="tOther" name="tOther" value="0.3">
+                <label >T_bc:</label>
+                <input type="number" id="tBc" name="tBc" value="0.8">
+                <label >T_ab:</label>
+                <input type="number" id="tAb" name="tAb" value="3">
+                <br> <br>
+                <label >f_r:</label>
+                <input type="number" id="fR" name="fR" value="10">
+                <label >f_f:</label>
+                <input type="number" id="fF" name="fF" value="3">
+                <label >f_m:</label>
+                <input type="number" id="fM" name="fM" value="0.01">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div id="searchForm">
+          <input type="text" id="searchInput" placeholder="Enter Name">
+          <button id="searchButton">Search</button>
+        </div>
+        <br>
+
+        <button type="button" id="chartButton">Generate Charts</button>
+
+      </form>
+    </section>
+
+    <section id="resultSection" class="hidden">
+      <h2>Results</h2>
+      <div id="resultTable"></div>
+    </section>
+
+    <section id="searchSection" class="hidden">
+      <h2>Search</h2>
+      <button id="backButton">Back</button>
+
+      <div id="searchTable"></div>
+    </section>
+
+    <section id="chartSection" class="hidden">
+      <h2>Bar Chart</h2>
+      <div class="chart-container">
+        <canvas id="barChart"></canvas>
+      </div>
+    </section>
+
+    <section id="pieSection" class="hidden">
+      <h2>Pie Chart</h2>
+      <div class="pie-container">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </section>
+
+  </main>
+
+  <section id="messageSection" class="hidden">
+    <div id="messageBox"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Ray Chen. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
